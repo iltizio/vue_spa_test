@@ -23,7 +23,11 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## Useful links and references
 https://scotch.io/tutorials?hFR%5Bcategory%5D%5B0%5D=Tutorials&dFR%5B_tags%5D%5B0%5D=vue
+
 https://vuetifyjs.com
+
 https://vuetifyjs.com/style/colors
+
 https://www.materialui.co/icons
+
 https://www.w3schools.com/icons/google_icons_maps.asp
