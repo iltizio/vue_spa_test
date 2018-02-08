@@ -44,6 +44,34 @@
                 </v-layout>
               </v-container>
             </v-flex>
+
+            <v-flex xs12>
+              <v-container grid-list-xm>
+                <v-layout row wrap align-center>
+                  <v-flex xs8 offset-xs2>
+                    <v-card class="elevation-0 transparent">
+                      <v-card-text class="text-xs-center">
+                        <v-icon x-large class="green--text text--lighten-1">local_library</v-icon>
+                      </v-card-text>
+                        <v-expansion-panel>
+                          <v-expansion-panel-content>
+                            <div slot="header">Interests</div>
+                            <v-card>
+                              <v-card-text>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. 
+                                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                                Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti. 
+                              </v-card-text>
+                            </v-card>
+                          </v-expansion-panel-content>
+                        </v-expansion-panel>
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-flex>
+
           </v-layout>
       </section>
     </v-content>
