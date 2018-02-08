@@ -33,8 +33,25 @@
         Test SPA
       </v-toolbar-title>
     </v-toolbar>
-    
+
     <v-footer app fixed>
+      <v-fab-transition>
+      <v-btn v-show="showScrollToTop" 
+        id="scrollTop"
+        fab
+        v-scroll="onScroll"
+        color="red"
+        key="keyboard_arrow_up"
+        dark
+        fixed
+        bottom
+        right
+        ripple
+        @click="scrollToTop"
+      >
+        <v-icon>keyboard_arrow_up</v-icon>
+      </v-btn>
+    </v-fab-transition>
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
 
@@ -44,29 +61,45 @@
 </template>
 
 <script>
-  export default {
-    name:"App",
-    data: () => ({
-      drawer: null,
-      items: [
-        {
-          action: 'home',
-          title: 'Home',
-          path: '/'
-        },
-        {
-          action: 'info',
-          title: 'About',
-          path: '/about'
-        },
-        {
-          action: 'widgets',
-          title: 'Gallery',
-          path: '/gallery'
-        } 
-      ]
-    }),
-    props: {
+export default {
+  name: "App",
+  data: () => ({
+    drawer: null,
+    items: [
+      {
+        action: "home",
+        title: "Home",
+        path: "/"
+      },
+      {
+        action: "info",
+        title: "About",
+        path: "/about"
+      },
+      {
+        action: "widgets",
+        title: "Gallery",
+        path: "/gallery"
+      }
+    ],
+    showScrollToTop: false
+  }),
+  props: {},
+  methods: {
+    onScroll(e) {
+      if (
+        document.body.scrollTop > 50 || // For Safari
+        document.documentElement.scrollTop > 50 // For Chrome, Firefox, IE and Opera
+      ) {
+        this.showScrollToTop = true;
+      } else {
+        this.showScrollToTop = false;
+      }
+    },
+    scrollToTop() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
   }
+};
 </script>
